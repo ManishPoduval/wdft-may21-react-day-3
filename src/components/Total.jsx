@@ -1,44 +1,33 @@
 import React, { Component } from 'react'
 
-class Total extends Component {
-    //Our props will look like this
 
-    /*
+function Total(props) {
 
-    this.props = {
-        books = [{},  . . . . {}]
-    }
+    const {books} = props
 
-    */
+    // Calculate the sum here
+    let sum = books.reduce((acc, book) => {
+        return acc + (book.quantity * book.price)
+    }, 0)
 
-    
-
-    render() {
-        const {books} = this.props
-
-        let sum = books.reduce((acc, book) => {
-            return acc + (book.quantity * book.price)
-        }, 0)
-
-        return (
-            <div>
-                Total
-                {
-                    books.map((book) => {
-                        return (
-                            <div>
-                                {book.title} x {book.quantity} = {book.quantity * book.price}
-                            </div>    
-                        )
-                    })
-                }
-
-                <h3>
-                    Total amount is : {sum}
-                </h3>
-            </div>
-        )
-    }
+    return (
+        <div>
+            Total
+            {
+                books.map((book) => {
+                    return (
+                        <div>
+                            {book.title} x {book.quantity} = {book.quantity * book.price}
+                        </div>    
+                    )
+                })
+            }
+            <h3>
+                Total amount is : {sum}
+            </h3>
+        </div>
+    )
 }
+
 
 export default Total
