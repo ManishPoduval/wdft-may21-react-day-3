@@ -44,6 +44,41 @@ function App() {
     updateFilteredBooks(filteredBooks)
   }
 
+  // behaves as your componentDidMount 
+  useEffect(() => {
+      console.log('App was MOUNTED')
+      axios.get
+  }, [])
+
+  // conditional componentDidUpdate only when the state `books` gets updated
+  useEffect(() => {
+    console.log('App was UPDATED')
+  }, [books])
+
+  // this function will run as a componentDidUpdate only when the state `total` gets updated
+  useEffect(() => {
+    console.log('App was UPDATED')
+  }, [total])
+
+// this function will run as a componentDidUpdate only when the state `total` or the state `books` gets updated
+  useEffect(() => {
+    console.log('App was UPDATED')
+  }, [total])
+
+  
+  // behaves as your componentDidUpdate 
+  useEffect(() => {
+    console.log('App was UPDATED')
+  })
+
+  // behaves as your componentDidUnMount 
+  useEffect(() => {
+    return () => {
+      console.log('App was UNMOUNTED')
+    }
+  })
+
+
   return (
     <div >
       My shopping App
