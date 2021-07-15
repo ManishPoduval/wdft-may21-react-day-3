@@ -1,4 +1,4 @@
-import React, { useState } from 'react'
+import React, { useState, useEffect } from 'react'
 import {Paper, Grid} from '@material-ui/core';
 import Items from './components/Items';
 import Total from './components/Total';
