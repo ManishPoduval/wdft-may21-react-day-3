@@ -44,7 +44,8 @@ class App extends Component {
   handleAddNewBook = (newBook) => {
       // remeber to update the filtered books as well which we have not done
       this.setState({
-        books: [newBook, ...this.state.books]
+        books: [newBook, ...this.state.books],
+        filteredBooks: [newBook, ...this.state.books],
       })
   }
 
@@ -62,6 +63,7 @@ class App extends Component {
       filteredBooks: filteredBooks
     })
   }
+
 
   render() {
     return (
@@ -90,4 +92,4 @@ class App extends Component {
 }
 
 
-export default App;
+export default App

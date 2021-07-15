@@ -24,9 +24,9 @@ class Total extends Component {
             <div>
                 Total
                 {
-                    books.map((book) => {
+                    books.map((book, i) => {
                         return (
-                            <div>
+                            <div key={i} >
                                 {book.title} x {book.quantity} = {book.quantity * book.price}
                             </div>    
                         )
