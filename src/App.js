@@ -64,8 +64,17 @@ class App extends Component {
     })
   }
 
+  componentDidUpdate(){
+    console.log('App was UPDATED')
+  }
+
+  componentDidMount() {
+    console.log('App was MOUNTED')
+  }
+
 
   render() {
+    console.log('App was RENDERED')
     return (
       <div >
         My shopping App

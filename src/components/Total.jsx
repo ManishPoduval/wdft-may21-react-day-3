@@ -11,9 +11,17 @@ class Total extends Component {
 
     */
 
+    componentDidMount() {
+        console.log('Total was MOUNTED')
+    }
+
+    componentDidUpdate(){
+        console.log('Total was UPDATED')
+    }
     
 
     render() {
+        console.log('Total was RENDERED')
         const {books} = this.props
 
         let sum = books.reduce((acc, book) => {

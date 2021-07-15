@@ -40,7 +40,16 @@ class Items extends Component {
         this.props.onAddNewBook(newBook)
     }
 
+    componentDidMount() {
+        console.log('Items was MOUNTED')
+    }
+    
+    componentDidUpdate(){
+        console.log('Items was UPDATED')
+    }
+
     render() {
+        console.log('Items was RENDERED')
         // destructure your books here
         const {books, handleAddTotal} = this.props
         const {showForm} = this.state
