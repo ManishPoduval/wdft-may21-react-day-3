@@ -47,7 +47,6 @@ function App() {
   // behaves as your componentDidMount 
   useEffect(() => {
       console.log('App was MOUNTED')
-      axios.get
   }, [])
 
   // conditional componentDidUpdate only when the state `books` gets updated
